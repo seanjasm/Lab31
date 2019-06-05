@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using StarWars.Models;
 
 namespace StarWars.Controllers
 {
@@ -11,6 +12,18 @@ namespace StarWars.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult Person(int i)
+        {
+            Person person = StarWarsDAL.GetPerson(i);
+            return View(person);
+            //return View(StarWarsDAL.GetPerson(i));
+        }
+
+        public ActionResult Planet(int i)
+        {
+            return View(StarWarsDAL.GetPlanet(i));
         }
 
         public ActionResult About()

@@ -1,0 +1,21 @@
+﻿@model StarWars.Models.Person
+    <style>
+        body {
+            background-color: hsl(0, 85%, 43%);
+        }
+        .info{
+            background-color: white;
+            text-align: center;
+            margin: 20px 0 0 0;
+            font-family:'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+    <div class="container-fluid">
+        <div class="info col-md-5 col-xs-10">
+            <h3>About @Model.Name</h3>
+            <p>Sex: @Model.Gender</p>
+            <p>Specie: @Model.Species</p>
+            <p>Home Planet: @Model.HomePlanet</p>
+        </div>
+    </div>
+
